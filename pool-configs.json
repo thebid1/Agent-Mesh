@@ -1,0 +1,46 @@
+{
+  "AUSDC": {
+    "tokenSymbol": "AUSDC",
+    "poolId": "6coUhjgmVqzgdbMYAfZaMRBKWHFjTRAWZJ7HcPre1qsr",
+    "vaultA": "FhgQ1usvPeCcNNMWygxNfGK7ybFSDTEPjYkm2zuGtPkt",
+    "vaultB": "4oXBEdECPF8cbwAvdWaDu2gaYJR9PqgDzTat1YBvbqmH",
+    "mintA": "B7tFhVdFeafrdBcCEWsjDXr3rUqkwXMmtbDKkJDy6PqE",
+    "mintB": "So11111111111111111111111111111111111111112",
+    "decimalsA": 6,
+    "decimalsB": 9,
+    "createdAt": "2026-03-01T20:00:00.000Z"
+  },
+  "ABTC": {
+    "tokenSymbol": "ABTC",
+    "poolId": "34sCQqRaX8ZNJiYjCYHRWeWMfcbHH4n7sgNyLkEnZt6h",
+    "vaultA": "CD1q5hLSwVqKZtD4U56DFCyNxCqREtZieQXUsbJ4XrUy",
+    "vaultB": "Bi38RDjXpCprqos7aXeVhFPnRSRcbzudfQgKmeSCVYyz",
+    "mintA": "eL6FAw3nzY8ftwjwtgJnGWAdb4aNZHmsK5H39f2F4tN",
+    "mintB": "So11111111111111111111111111111111111111112",
+    "decimalsA": 6,
+    "decimalsB": 9,
+    "createdAt": "2026-03-01T20:01:26.372Z"
+  },
+  "AETH": {
+    "tokenSymbol": "AETH",
+    "poolId": "5gnjqhtZhZ8vHaWZ8N1sQTcSWZH1qqmLAWjbuo2t8TP4",
+    "vaultA": "CYgbiJFcqRjjUs94KzmPPfKnRkVCwALTxm5UMNmdxz7U",
+    "vaultB": "E8TyxeXhJFfHc5RqdQg4KvocqeCCrDDLhBpEERSziYuh",
+    "mintA": "8L4wBtjbS4bjJXDhg8QHpVkvNfqamvCddAzqtMetr1DC",
+    "mintB": "So11111111111111111111111111111111111111112",
+    "decimalsA": 6,
+    "decimalsB": 9,
+    "createdAt": "2026-03-01T20:01:54.287Z"
+  },
+  "ASOL": {
+    "tokenSymbol": "ASOL",
+    "poolId": "4PCyaaUSm9dt4R5M736dtncGxrSg8ASbT9pvbMjLLtkf",
+    "vaultA": "8GD1LTcZVwiFVhmMwRF9HQjJrkYvLkVpXK4Ky7sCAqrP",
+    "vaultB": "5ARruDw527kAtdXtU4VPzLgws5aQPYK2uEYxZeMmwuA",
+    "mintA": "4XXFcpZM7w2RD2r8nQz2UST67f8kef4JohPzp1Y72Y69",
+    "mintB": "So11111111111111111111111111111111111111112",
+    "decimalsA": 6,
+    "decimalsB": 9,
+    "createdAt": "2026-03-01T20:02:30.000Z"
+  }
+}

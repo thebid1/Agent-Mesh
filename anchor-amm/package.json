@@ -1,0 +1,25 @@
+{
+  "name": "agent-mesh-amm",
+  "version": "0.1.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "anchor build",
+    "deploy": "anchor deploy --provider.cluster devnet",
+    "test": "anchor test",
+    "create-pool": "npx ts-node app/createPool.ts",
+    "create-all": "npx ts-node app/createAllPools.ts",
+    "swap": "npx ts-node app/swap.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.87.0"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "yarn@1.22.22"
+}

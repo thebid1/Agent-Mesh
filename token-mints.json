@@ -1,0 +1,36 @@
+{
+  "tokens": [
+    {
+      "symbol": "AUSDC",
+      "name": "Agent USDC",
+      "decimals": 6,
+      "supply": 1000000,
+      "mint": "B7tFhVdFeafrdBcCEWsjDXr3rUqkwXMmtbDKkJDy6PqE",
+      "explorer": "https://explorer.solana.com/address/B7tFhVdFeafrdBcCEWsjDXr3rUqkwXMmtbDKkJDy6PqE?cluster=devnet"
+    },
+    {
+      "symbol": "ABTC",
+      "name": "Agent BTC",
+      "decimals": 6,
+      "supply": 1000000,
+      "mint": "eL6FAw3nzY8ftwjwtgJnGWAdb4aNZHmsK5H39f2F4tN",
+      "explorer": "https://explorer.solana.com/address/eL6FAw3nzY8ftwjwtgJnGWAdb4aNZHmsK5H39f2F4tN?cluster=devnet"
+    },
+    {
+      "symbol": "AETH",
+      "name": "Agent ETH",
+      "decimals": 6,
+      "supply": 1000000,
+      "mint": "8L4wBtjbS4bjJXDhg8QHpVkvNfqamvCddAzqtMetr1DC",
+      "explorer": "https://explorer.solana.com/address/8L4wBtjbS4bjJXDhg8QHpVkvNfqamvCddAzqtMetr1DC?cluster=devnet"
+    },
+    {
+      "symbol": "ASOL",
+      "name": "Agent SOL",
+      "decimals": 6,
+      "supply": 1000000,
+      "mint": "4XXFcpZM7w2RD2r8nQz2UST67f8kef4JohPzp1Y72Y69",
+      "explorer": "https://explorer.solana.com/address/4XXFcpZM7w2RD2r8nQz2UST67f8kef4JohPzp1Y72Y69?cluster=devnet"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+*.js
+*.js.map
+*.d.ts
+!jest.config.js
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Wallet files (SENSITIVE!)
+# Raw keypairs (should never exist)
+treasury-keypair.json
+treasury-keypair-info.txt
+agent-keypairs/*.json
+wallet-registry.json
+*.keypair.json
+
+# Agent configuration (environment-specific)
+agents.config.json
+
+# Encrypted keypairs (still sensitive!)
+*.enc.json
+agent-keypairs/
+!agent-keypairs/.gitkeep
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Documentation (generated/rendered)
+AGENTS.md
+
+# Anchor AMM build artifacts
+anchor-amm/target/
+anchor-amm/node_modules/
+anchor-amm/.anchor/
+anchor-amm/**/*.log
