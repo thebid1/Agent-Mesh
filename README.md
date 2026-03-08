@@ -68,7 +68,7 @@ All signing happens automatically within the WalletManager. Agents never handle 
 
 ### 1. Install
 ```bash
-git clone <repo>
+git clone https://github.com/thebid1/Agent-Mesh.git
 cd agent-mesh
 npm install
 cp .env.template .env
