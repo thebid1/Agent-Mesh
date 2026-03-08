@@ -90,7 +90,12 @@ Creates encrypted treasury wallet at `./treasury-keypair.enc.json`.
 ```bash
 npm run setup-treasury
 ```
-Requests devnet SOL from faucet, then buys AUSDC, ABTC, AETH, ASOL from AMM pools.
+**Requires:** ~5-10 SOL in treasury (for tokens + volatility generation)
+
+This script:
+- Requests devnet SOL from faucet (or use https://faucet.solana.com)
+- Buys AUSDC, ABTC, AETH, ASOL from AMM pools (~1-2 SOL worth)
+- **Treasury also runs the Volatility Generator** — executes random swaps to create price movements for agents to trade against
 
 ### 5. Create Agents
 ```bash
@@ -127,6 +132,53 @@ AUSDC, ABTC, AETH, and ASOL are custom tokens minted on devnet for this project.
 2. Or request from the deployed pools directly via the AMM
 
 Token mints are defined in `token-mints.json` and `src/config/index.ts`.
+
+### Creating Your Own Tokens (Optional)
+
+To create custom tokens with Metaplex:
+
+```bash
+# Install Metaplex CLI
+npm install -g @metaplex-foundation/cli
+
+# Create token with metadata
+metaplex create token --name "Your Token" --symbol "YTK" --decimals 6 --url https://arweave.net/YOUR_METADATA_URI
+
+# Mint supply to your wallet
+metaplex mint token --token <TOKEN_MINT> --amount 1000000
+```
+
+Update `token-mints.json` and `pool-configs.json` with your new token addresses.
+
+## Deploying Your Own AMM Program (Optional)
+
+To deploy the custom AMM program from source:
+
+```bash
+cd anchor-amm
+
+# Install dependencies
+npm install
+
+# Build the program
+anchor build
+
+# Deploy to devnet
+anchor deploy --provider.cluster devnet
+
+# Get program ID
+solana address -k target/deploy/agent_amm-keypair.json
+
+# Update program ID in anchor-amm/app/idl.json
+# Update pool PDAs in pool-configs.json using new program
+```
+
+**Program source:** `anchor-amm/programs/amm/src/lib.rs`
+
+Key instructions:
+- `initialize_pool` — Create new token pool
+- `add_liquidity` — Deposit tokens + SOL
+- `swap` — Execute token swaps
 
 ## Security Model
 
