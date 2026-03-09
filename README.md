@@ -243,6 +243,30 @@ Recent live transactions (from `logs/all-transactions.json`):
 | 08:41:26 | arbitrageur-01 | BUY | AUSDC | [2QsazZcis...](https://explorer.solana.com/tx/2QsazZcisVRYi6B94QTY9m9VETXq7oy9aVbZvLifiKEQEemR4kQJNGu37LGFib9mYUdYTtG6CRTsAweP73HVkXM?cluster=devnet) |
 | 08:41:28 | arbitrageur-01 | BUY | ASOL | [4qwe343ycz...](https://explorer.solana.com/tx/4qwe343yczCvK72s3R5r28jtNEfMt1XJwrEs23dwMrpLQSiTFKRWDPfvYHLqWfMoi2gudxwC5uhVgPTDPLreRvYS?cluster=devnet) |
 
+## Troubleshooting
+
+### Transaction Timeouts on Devnet
+
+Solana devnet can experience congestion, causing transactions to timeout or fail. If you encounter:
+
+```
+Error: Transaction was not confirmed in 30.00 seconds
+```
+
+**Solutions:**
+1. **Check transaction status on explorer** — Copy the transaction signature (if available) and verify on [Solana Explorer](https://explorer.solana.com/?cluster=devnet). The transaction may have succeeded despite the timeout error.
+
+2. **Retry the operation** — Devnet is eventually consistent; simply run the command again.
+
+3. **Use a custom RPC** — Public devnet RPC can be slow. Add a custom RPC URL to `.env`:
+   ```
+   SOLANA_RPC_URL=https://solana-devnet.g.alchemy.com/v2/YOUR_API_KEY
+   ```
+
+4. **Increase confirmation timeout** — Modify scripts to use longer timeout values if needed.
+
+**Best Practice:** Always verify on-chain before retrying. Check your wallet balances or pool states to confirm whether the previous transaction actually succeeded before attempting again.
+
 ## Known Limitations
 
 1. **Devnet only** — All contracts and tokens are on Solana devnet
@@ -250,6 +274,7 @@ Recent live transactions (from `logs/all-transactions.json`):
 3. **Custom tokens** — AUSDC/ABTC/AETH/ASOL have no real value
 4. **Trade size limits** — AETH trades limited to 0.005 SOL to avoid u64 overflow in constant product math
 5. **No Jupiter integration** — Uses custom AMM exclusively
+6. **Devnet reliability** — Transactions may timeout due to devnet congestion; verify on-chain before retrying
 
 These constraints are intentional design choices for a self-contained demo environment that can run indefinitely without external dependencies.
 
